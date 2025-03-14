@@ -1,3 +1,3 @@
 validation_prompt,validation_images,validation_trajectory_maps,output_path,controlnet_weights,seed
-A full moon moves across the night sky with a castle and a bridge below.,assets/images/condition/moon_castle.jpg,assets/sparse_box_trajectory/moon_castle/moved_mask/moon_castle.mp4,samples/demo/stage3/moon_castle.mp4,1.0,42
-A man slowly sinks his head into the water,assets/images/condition/man_head.jpg,assets/sparse_box_trajectory/man_head/moved_mask2/man_head.mp4,samples/demo/stage3/man_head.mp4,1.0,42
+A full moon moves across the night sky with a castle and a bridge below.,assets/images/condition/moon_castle.jpg,assets/sparse_box_trajectory/moon_castle.mp4,samples/demo/stage3/moon_castle.mp4,1.0,42
+A man slowly sinks his head into the water,assets/images/condition/man_head.jpg,assets/sparse_box_trajectory/man_head.mp4,samples/demo/stage3/man_head.mp4,1.0,42
