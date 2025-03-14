@@ -1,0 +1,9 @@
+magicmotion/scripts/train
+__pycache__/
+samples/
+installation.sh
+accelerate_configs
+magicmotion/dataset
+magicmotion/train.py
+huggingface_download.sh
+huggingface_uplaod.py

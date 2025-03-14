@@ -1,0 +1,5 @@
+validation_prompt,validation_images,validation_trajectory_maps,output_path,controlnet_weights,seed
+Two cartoon wizards walking towards each other,assets/images/condition/cartoon_wizard.jpg,assets/box_trajectory/cartoon_wizard.mp4,samples/demo/stage2/cartoon_wizard.mp4,1.0,42
+A unicorn floatie floating in a pool,assets/images/condition/floatie.jpg,assets/box_trajectory/floatie.mp4,samples/demo/stage2/floatie.mp4,1.0,18
+horse moving in the sky with a child on its back,assets/images/condition/child_horse.jpg,assets/box_trajectory/child_horse.mp4,samples/demo/stage2/child_horse.mp4,1.0,8
+A priestess lifting a ball to her head,assets/images/condition/priestess.jpg,assets/box_trajectory/priestess.mp4,samples/demo/stage2/priestess.mp4,1.0,42
