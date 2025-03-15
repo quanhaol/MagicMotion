@@ -10,7 +10,6 @@
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Benchmark-ffbd45.svg" alt="HuggingFace"></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 
-
 > **MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance**
 > [Quanhao Li\*](https://github.com/quanhaol), [Xing Zhen\*](https://chenhsing.github.io/), [Rui Wang](https://scholar.google.com/citations?user=116smmsAAAAJ&hl=en), [Hui Zhang](https://huizhang0812.github.io/), [Qi Dai](https://daiqi1989.github.io/), and [Zuxuan Wu](https://zxwu.azurewebsites.net/)
 \* equal contribution
@@ -98,6 +97,7 @@ bash magicmotion/scripts/inference/inference_mask.sh
 bash magicmotion/scripts/inference/inference_box.sh
 bash magicmotion/scripts/inference/inference_sparse_box.sh
 ```
+
 ## 🤝 Acknowledgements
 
 We would like to express our gratitude to the following open-source projects that have been instrumental in the development of our project:
