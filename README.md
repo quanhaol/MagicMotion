@@ -1,13 +1,9 @@
-<div align="center">
-
 <img src='assets/images/teaser/teaser.jpg' width='100%' />
 <br>
 <a href="https://arxiv.org/pdf/2412.03859"><img src="https://img.shields.io/static/v1?label=Paper&message=2412.03859&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>
 <a href='https://quanhaol.github.io/magicmotion-site/'><img src='https://img.shields.io/badge/Project-Page-Blue'></a>
 <a href="https://github.com/quanhaol/MagicMotion"><img src='https://img.shields.io/badge/Github-Link-orange'></a>
-<a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-ffbd45.svg" alt="HuggingFace"></a>
-<a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Benchmark-ffbd45.svg" alt="HuggingFace"></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 
 > **MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance**
