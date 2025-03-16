@@ -1,8 +1,9 @@
-<img src='assets/images/teaser/teaser.jpg' width='100%' />
+<video src="https://github.com/user-attachments/assets/ca7dd4b2-b9ec-4257-892f-caa2e275d8e4.mp4" width="100%" controls>
+  Your browser does not support the video tag.
+</video>
 <br>
 <a href="https://arxiv.org/pdf/2412.03859"><img src="https://img.shields.io/static/v1?label=Paper&message=2412.03859&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>
-<a href='https://quanhaol.github.io/magicmotion-site/'><img src='https://img.shields.io/badge/Project-Page-Blue'></a>
 <a href="https://github.com/quanhaol/MagicMotion"><img src='https://img.shields.io/badge/Github-Link-orange'></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 
