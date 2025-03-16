@@ -110,10 +110,10 @@ Special thanks to the contributors of these libraries for their hard work and de
 ## 📚 Citation
 
 ```bibtex
-@misc{zhang2024toratrajectoryorienteddiffusiontransformer,
-      title={Tora: Trajectory-oriented Diffusion Transformer for Video Generation},
-      author={Zhenghao Zhang and Junchao Liao and Menghao Li and Zuozhuo Dai and Bingxue Qiu and Siyu Zhu and Long Qin and Weizhi Wang},
-      year={2024},
+@misc{li2025magicmotion,
+      title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance},
+      author={Quanhao Li and Zhen Xing and Rui Wang and Hui Zhang and Qi Dai and Zuxuan Wu},
+      year={2025},
       eprint={2407.21705},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
