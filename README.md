@@ -8,7 +8,7 @@
 
 > **MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance**
 > <br>
-> [Quanhao Li\*](https://github.com/quanhaol), [Xing Zhen\*](https://chenhsing.github.io/), [Rui Wang](https://scholar.google.com/citations?user=116smmsAAAAJ&hl=en), [Hui Zhang](https://huizhang0812.github.io/), [Qi Dai](https://daiqi1989.github.io/), and [Zuxuan Wu](https://zxwu.azurewebsites.net/)
+> [Quanhao Li\*](https://github.com/quanhaol), [Zhen Xing\*](https://chenhsing.github.io/), [Rui Wang](https://scholar.google.com/citations?user=116smmsAAAAJ&hl=en), [Hui Zhang](https://huizhang0812.github.io/), [Qi Dai](https://daiqi1989.github.io/), and [Zuxuan Wu](https://zxwu.azurewebsites.net/)
 > <br>
 \* equal contribution
 
