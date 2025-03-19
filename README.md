@@ -66,7 +66,7 @@ cd trajectory_construction/Grounded_SAM2
 pip install -e .
 pip install --no-build-isolation -e grounding_dino
 
-# For image editing
+# Optional: For image editing
 pip install git+https://github.com/huggingface/image_gen_aux
 ```
 
