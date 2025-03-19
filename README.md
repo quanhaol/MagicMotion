@@ -3,8 +3,7 @@
 </video>
 <br>
 <a href="https://arxiv.org/pdf/2412.03859"><img src="https://img.shields.io/static/v1?label=Paper&message=2412.03859&color=red&logo=arxiv"></a>
-<a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>
-<a href="https://github.com/quanhaol/MagicMotion"><img src='https://img.shields.io/badge/Github-Link-orange'></a>
+<a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=green&logo=github-pages"></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 
 > **MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance**
@@ -45,6 +44,7 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 ## ✅ TODO List
 
 - [x] Release our inference code and model weights
+- [ ] Release gradio demo
 - [ ] Release our training code
 - [ ] Release MagicData
 - [ ] Release MagicBench
@@ -55,11 +55,19 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 # Clone this repository.
 git clone https://github.com/quanhaol/MagicMotion
 cd MagicMotion
+
 # Install requirements
-conda create -n magicmotion python==3.10
+conda env create -n magicmotion --file environment.yml
 conda activate magicmotion
-pip install -r requirements.txt
 pip install git+https://github.com/huggingface/diffusers
+
+# Install Grounded_SAM2
+cd trajectory_construction/Grounded_SAM2
+pip install -e .
+pip install --no-build-isolation -e grounding_dino
+
+# For image editing
+pip install git+https://github.com/huggingface/image_gen_aux
 ```
 
 ## 📦 Model Weights
@@ -91,10 +99,19 @@ HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download quanhaol/MagicMotion --loca
 It requires around 55 GiB GPU memory tested on NVIDIA A100.
 
 ```bash
-# Inference script of each stage
+# Demo inference script of each stage (Input Image & Trajectory already provided)
 bash magicmotion/scripts/inference/inference_mask.sh
 bash magicmotion/scripts/inference/inference_box.sh
 bash magicmotion/scripts/inference/inference_sparse_box.sh
+
+# You an also construct trajectory for each stage by yourself -- See MagicMotion/trajectory_construction for more details
+python trajectory_construction/plan_mask.py
+python trajectory_construction/plan_box.py
+python trajectory_construction/plan_sparse_box.py
+
+# Optional: Use FLUX to generate input image by text-to-image generation or image editing -- See MagicMotion/first_frame_generation for more details
+python first_frame_generation/t2i_flux.py
+python first_frame_generation/edit_image_flux.py
 ```
 
 ## 🤝 Acknowledgements

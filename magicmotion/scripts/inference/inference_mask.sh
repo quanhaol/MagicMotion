@@ -1,6 +1,6 @@
 # export CUDA_VISIBLE_DEVICES=0
 MODEL_PATH="THUDM/CogVideoX-5b-I2V"
-controlnet_path="ckpts/stage1/trajectory_controlnet.pt"
+controlnet_path="/datadrive2/cogvideox/mask/Pexels_MeViS_MOSE_DAVIS/Controlnet/checkpoint-17000.pt"
 
 python magicmotion/inference.py \
     --pretrained_model_name_or_path  $MODEL_PATH \

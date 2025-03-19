@@ -229,7 +229,6 @@ class MagicMotionTransformer3DModel(CogVideoXTransformer3DModel):
                 H=height,
                 W=width,
             )
-            # save_tensor_as_images_with_pca(mask_pred, "visualization/man_head/mask_pred")
 
         if not self.config.use_rotary_positional_embeddings:
             # CogVideoX-2B
@@ -343,7 +342,6 @@ class MagicMotionTransformer3DModel(CogVideoXTransformer3DModel):
         # no in-place modification of the original config.
         config = copy.deepcopy(config)
 
-        # 2. 使用父类的配置初始化子类模型
         if low_cpu_mem_usage:
             # Instantiate model with empty weights
             with accelerate.init_empty_weights():

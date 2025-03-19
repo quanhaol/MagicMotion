@@ -88,11 +88,6 @@ def main(args):
         f"[ Weights from pretrained controlnet was loaded into controlnet ] [M: {len(m)} | U: {len(u)}]"
     )
 
-    params = [p.numel() for n, p in controlnet.named_parameters()]
-    print(f"### Whole Controlnet Parameters: {sum(params) / 1e9} B")
-    params = [p.numel() for n, p in transformer.named_parameters()]
-    print(f"### Whole Transformer Parameters: {sum(params) / 1e9} B")
-
     scheduler = CogVideoXDPMScheduler.from_pretrained(
         "THUDM/CogVideoX-5b-I2V", subfolder="scheduler"
     )
