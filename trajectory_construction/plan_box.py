@@ -1,22 +1,15 @@
 import os
-
 import cv2
 import numpy as np
 import pandas as pd
 import supervision as sv
 import torch
-from Grounded_SAM2.utils.track_utils import (
-    sample_points_from_masks,
-)
-from Grounded_SAM2.sam2.sam2_image_predictor import (
-    SAM2ImagePredictor,
-)
-from Grounded_SAM2.sam2.build_sam import (
-    build_sam2,
-    build_sam2_video_predictor,
-)
+from Grounded_SAM2.utils.track_utils import sample_points_from_masks
+from Grounded_SAM2.sam2.sam2_image_predictor import SAM2ImagePredictor
+from Grounded_SAM2.sam2.build_sam import build_sam2, build_sam2_video_predictor
 from PIL import Image
 from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
+import argparse
 
 NUM_FRAMES = 49
 
@@ -198,11 +191,7 @@ def segment(
 
 
 def generate_frames_with_translated_boxes(
-    mask_image,
-    unique_colors,
-    translations,
-    output_video_path,
-    num_frames=NUM_FRAMES,
+    mask_image, unique_colors, translations, output_video_path, num_frames=NUM_FRAMES
 ):
     boxes = {}
     for color in unique_colors:
@@ -239,13 +228,25 @@ def generate_frames_with_translated_boxes(
 
 
 if __name__ == "__main__":
-    # setup the input image and text prompt for ~SAM 2 and Grounding DINO
-    # VERY important: text queries need to be lowercased + end with a dot
-    text = "head."
-    # `video_dir` a directory of JPEG frames with filenames like `<frame_index>.jpg`
-    video_dir = "trajectory_construction/Grounded_SAM2/demo/tiger"
-    annotated_frames = segment(text, video_dir)
-    output_video_path = "assets/box_trajectory/tiger.mp4"
+    parser = argparse.ArgumentParser(
+        description="Segment video frames using Grounded-SAM2 and save as a video."
+    )
+    parser.add_argument(
+        "--text", type=str, required=True, help="The text prompt for Grounding DINO."
+    )
+    parser.add_argument(
+        "--video_dir", type=str, required=True, help="The directory of JPEG frames."
+    )
+    parser.add_argument(
+        "--output_video_path",
+        type=str,
+        required=True,
+        help="The path to save the output video.",
+    )
+    args = parser.parse_args()
+
+    annotated_frames = segment(args.text, args.video_dir)
+    output_video_path = args.output_video_path
 
     mask_image = annotated_frames[0]
     df = pd.DataFrame(mask_image.reshape(-1, 3), columns=["R", "G", "B"])
@@ -254,7 +255,7 @@ if __name__ == "__main__":
     unique_colors = unique_colors[~np.all(unique_colors == [0, 0, 0], axis=1)]
 
     transformations = {}
-    # Define the (dx, dy, dw, dh) changes of the box for each frame
+    # Define the (dx, dy, dw, dh) changes of each box (one box per color) in each frame
     for idx, color in enumerate(unique_colors):
         color_tuple = tuple(color)
         transformations[color_tuple] = []

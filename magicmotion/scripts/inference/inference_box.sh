@@ -1,7 +1,7 @@
 # export CUDA_VISIBLE_DEVICES=0
 MODEL_PATH="THUDM/CogVideoX-5b-I2V"
-perception_head_path="ckpts/stage2/perception_head.pt"
-controlnet_path="ckpts/stage2/trajectory_controlnet.pt"
+perception_head_path="ckpts/stage2/box_perception_head.pt"
+controlnet_path="ckpts/stage2/box.pt"
 
 python magicmotion/inference.py \
     --pretrained_model_name_or_path  $MODEL_PATH \

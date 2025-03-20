@@ -1,22 +1,15 @@
 import os
-
 import cv2
 import numpy as np
 import pandas as pd
 import supervision as sv
 import torch
-from Grounded_SAM2.utils.track_utils import (
-    sample_points_from_masks,
-)
-from Grounded_SAM2.sam2.sam2_image_predictor import (
-    SAM2ImagePredictor,
-)
-from Grounded_SAM2.sam2.build_sam import (
-    build_sam2,
-    build_sam2_video_predictor,
-)
+from Grounded_SAM2.utils.track_utils import sample_points_from_masks
+from Grounded_SAM2.sam2.sam2_image_predictor import SAM2ImagePredictor
+from Grounded_SAM2.sam2.build_sam import build_sam2, build_sam2_video_predictor
 from PIL import Image
 from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
+import argparse
 
 
 def segment(
@@ -207,12 +200,23 @@ def save_video(frames, output_path, fps=10):
 
 
 if __name__ == "__main__":
-    # setup the input image and text prompt for ~SAM 2 and Grounding DINO
-    # VERY important: text queries need to be lowercased + end with a dot
-    text = "elephant.rhino."
-    # `video_dir` a directory of JPEG frames with filenames like `<frame_index>.jpg`
-    video_dir = "trajectory_construction/Grounded_SAM2/demo/mammoth_rhino"
-    annotated_frames = segment(text, video_dir)
-    output_video_path = "assets/mask_trajectory/mammoth_rhino2.mp4"
-    save_video(annotated_frames, output_video_path)
-    print(f"Video saved to {output_video_path}")
+    parser = argparse.ArgumentParser(
+        description="Segment video frames using Grounded-SAM2 and save as a video."
+    )
+    parser.add_argument(
+        "--text", type=str, required=True, help="The text prompt for Grounding DINO."
+    )
+    parser.add_argument(
+        "--video_dir", type=str, required=True, help="The directory of JPEG frames."
+    )
+    parser.add_argument(
+        "--output_video_path",
+        type=str,
+        required=True,
+        help="The path to save the output video.",
+    )
+    args = parser.parse_args()
+
+    annotated_frames = segment(args.text, args.video_dir)
+    save_video(annotated_frames, args.output_video_path)
+    print(f"Video saved to {args.output_video_path}")

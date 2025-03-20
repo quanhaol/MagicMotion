@@ -1,22 +1,15 @@
 import os
-
 import cv2
 import numpy as np
 import pandas as pd
 import supervision as sv
 import torch
-from Grounded_SAM2.utils.track_utils import (
-    sample_points_from_masks,
-)
-from Grounded_SAM2.sam2.sam2_image_predictor import (
-    SAM2ImagePredictor,
-)
-from Grounded_SAM2.sam2.build_sam import (
-    build_sam2,
-    build_sam2_video_predictor,
-)
+from Grounded_SAM2.utils.track_utils import sample_points_from_masks
+from Grounded_SAM2.sam2.sam2_image_predictor import SAM2ImagePredictor
+from Grounded_SAM2.sam2.build_sam import build_sam2, build_sam2_video_predictor
 from PIL import Image
 from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
+import argparse
 
 NUM_FRAMES = 49
 
@@ -242,16 +235,32 @@ def generate_frames_with_translated_boxes(
 
 
 if __name__ == "__main__":
-    # setup the input image and text prompt for ~SAM 2 and Grounding DINO
-    # VERY important: text queries need to be lowercased + end with a dot
-    text = "man."
-    # `video_dir` a directory of JPEG frames with filenames like `<frame_index>.jpg`
-    video_dir = "trajectory_construction/Grounded_SAM2/demo/man_head"
-    annotated_frames = segment(text, video_dir)
-    output_video_path = "assets/sparse_box_trajectory/man_head2.mp4"
+    parser = argparse.ArgumentParser(
+        description="Segment video frames using Grounded-SAM2 and save as a video."
+    )
+    parser.add_argument(
+        "--text", type=str, required=True, help="The text prompt for Grounding DINO."
+    )
+    parser.add_argument(
+        "--video_dir", type=str, required=True, help="The directory of JPEG frames."
+    )
+    parser.add_argument(
+        "--output_video_path",
+        type=str,
+        required=True,
+        help="The path to save the output video.",
+    )
+    parser.add_argument(
+        "--sparse_box_index",
+        type=int,
+        nargs="+",
+        required=True,
+        help="The indices of frames to retain the box trajectories.",
+    )
+    args = parser.parse_args()
 
-    # Set the retained sparse box index
-    sparse_box_index = [1, NUM_FRAMES - 1]
+    annotated_frames = segment(args.text, args.video_dir)
+    output_video_path = args.output_video_path
 
     mask_image = annotated_frames[0]
     df = pd.DataFrame(mask_image.reshape(-1, 3), columns=["R", "G", "B"])
@@ -260,7 +269,7 @@ if __name__ == "__main__":
     unique_colors = unique_colors[~np.all(unique_colors == [0, 0, 0], axis=1)]
 
     transformations = {}
-    # Define the (dx, dy, dw, dh) changes of the box for each frame
+    # Define the (dx, dy, dw, dh) changes of each box (one box per color) in each frame
     for idx, color in enumerate(unique_colors):
         color_tuple = tuple(color)
         transformations[color_tuple] = []
@@ -271,5 +280,9 @@ if __name__ == "__main__":
             raise ValueError(f"Unknown Color: {color_tuple}")
 
     generate_frames_with_translated_boxes(
-        mask_image, unique_colors, transformations, output_video_path, sparse_box_index
+        mask_image,
+        unique_colors,
+        transformations,
+        output_video_path,
+        args.sparse_box_index,
     )
