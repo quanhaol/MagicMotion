@@ -1,4 +1,4 @@
-<video src="https://github.com/user-attachments/assets/665057ab-a8ee-4f34-8bc6-e3904ac0b8d6" width="100%" controls>
+<video src="https://github.com/user-attachments/assets/965d4d76-afcb-49e4-ab92-f871427f7ab7" width="100%" controls>
   Your browser does not support the video tag.
 </video>
 <br>
@@ -25,7 +25,7 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 
 ## 📣 Updates
 
-- `2025/03/18` 🔥🔥We released MagicMotion, including inference code and model weights.
+- `2025/03/21` 🔥🔥We released MagicMotion, including inference code and model weights.
 
 ## 📑 Table of Contents
 
