@@ -1,6 +1,4 @@
-<video src="https://github.com/user-attachments/assets/965d4d76-afcb-49e4-ab92-f871427f7ab7" width="100%" controls>
-  Your browser does not support the video tag.
-</video>
+<img src="assets/teaser.webp" width="100%" alt="Teaser Image">
 <br>
 <a href="https://arxiv.org/pdf/2503.16421"><img src="https://img.shields.io/static/v1?label=Paper&message=2503.16421&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=green&logo=github-pages"></a>
