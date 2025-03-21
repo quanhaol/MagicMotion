@@ -2,7 +2,7 @@
   Your browser does not support the video tag.
 </video>
 <br>
-<a href="https://arxiv.org/pdf/2412.03859"><img src="https://img.shields.io/static/v1?label=Paper&message=2412.03859&color=red&logo=arxiv"></a>
+<a href="https://arxiv.org/pdf/2503.16421"><img src="https://img.shields.io/static/v1?label=Paper&message=2503.16421&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=green&logo=github-pages"></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
 
@@ -127,13 +127,13 @@ Special thanks to the contributors of these libraries for their hard work and de
 ## 📚 Citation
 
 ```bibtex
-@misc{li2025magicmotion,
-      title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance},
+@misc{li2025magicmotioncontrollablevideogeneration,
+      title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance}, 
       author={Quanhao Li and Zhen Xing and Rui Wang and Hui Zhang and Qi Dai and Zuxuan Wu},
       year={2025},
-      eprint={2407.21705},
+      eprint={2503.16421},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2407.21705},
+      url={https://arxiv.org/abs/2503.16421}, 
 }
 ```
