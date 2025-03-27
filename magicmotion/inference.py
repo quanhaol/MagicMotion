@@ -158,9 +158,7 @@ def main(args):
             video_generate = pipe(
                 **pipeline_args,
                 num_frames=num_frames,
-                generator=torch.Generator(device=pipe.device).manual_seed(
-                    seed
-                ),  # Set the seed for reproducibility
+                generator=torch.Generator().manual_seed(seed),
                 output_type="np",
             ).frames[0]
 

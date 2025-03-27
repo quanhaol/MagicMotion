@@ -36,6 +36,7 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
   - [Folder Structure](#folder-structure)
   - [Download Links](#download-links)
 - [🔄 Inference](#-inference)
+  - [Scripts](#scripts)
 - [🤝 Acknowledgements](#-acknowledgements)
 - [📚 Citation](#-citation)
 
@@ -66,6 +67,9 @@ pip install --no-build-isolation -e grounding_dino
 
 # Optional: For image editing
 pip install git+https://github.com/huggingface/image_gen_aux
+
+# For Gradio
+pip install git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
 ```
 
 ## 📦 Model Weights
@@ -93,9 +97,23 @@ HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download quanhaol/MagicMotion --loca
 ```
 
 ## 🔄 Inference
+Inference requires **only 23GB of GPU memory** (tested on a single 24GB NVIDIA GeForce RTX 4090 GPU).  
+If you have sufficient GPU memory, you can modify `magicmotion/inference.py` to improve runtime performance by changing:
 
-It requires around 55 GiB GPU memory tested on NVIDIA A100.
+```python
+# Default setting (for GPUs with limited memory)
+# pipe.to("cuda")
+pipe.enable_sequential_cpu_offload()
+```
+to
+```python
+# Optimized setting (for GPUs with sufficient memory)
+pipe.to("cuda")
+# pipe.enable_sequential_cpu_offload()
+```
+> **Note**: Using the optimized setting can reduce runtime by up to 2x.
 
+### Scripts
 ```bash
 # Demo inference script of each stage (Input Image & Trajectory already provided)
 bash magicmotion/scripts/inference/inference_mask.sh
