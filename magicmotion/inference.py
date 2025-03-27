@@ -107,8 +107,8 @@ def main(args):
     # turn off if you have multiple GPUs or enough GPU memory(such as H100) and it will cost less time in inference
     # and enable to("cuda")
 
-    pipe.to("cuda")
-    # pipe.enable_sequential_cpu_offload()
+    # pipe.to("cuda")
+    pipe.enable_sequential_cpu_offload()
     pipe.vae.enable_slicing()
     pipe.vae.enable_tiling()
 

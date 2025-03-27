@@ -22,7 +22,7 @@ We also introduce **MagicBench**, a comprehensive benchmark that assesses both v
 Extensive experiments demonstrate that MagicMotion outperforms previous methods across various metrics.
 
 ## 📣 Updates
-
+- `2025/03/27` MagicMotion can now perform inference on a single 4090 GPU (with less than 24GB of GPU memory).
 - `2025/03/21` 🔥🔥We released MagicMotion, including inference code and model weights.
 
 ## 📑 Table of Contents
