@@ -98,14 +98,8 @@ HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download quanhaol/MagicMotion --loca
 
 ## 🔄 Inference
 Inference requires **only 23GB of GPU memory** (tested on a single 24GB NVIDIA GeForce RTX 4090 GPU).  
-If you have sufficient GPU memory, you can modify `magicmotion/inference.py` to improve runtime performance by changing:
+If you have sufficient GPU memory, you can modify `magicmotion/inference.py` to improve runtime performance:
 
-```python
-# Default setting (for GPUs with limited memory)
-# pipe.to("cuda")
-pipe.enable_sequential_cpu_offload()
-```
-to
 ```python
 # Optimized setting (for GPUs with sufficient memory)
 pipe.to("cuda")
