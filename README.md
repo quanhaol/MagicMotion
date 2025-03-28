@@ -22,6 +22,7 @@ We also introduce **MagicBench**, a comprehensive benchmark that assesses both v
 Extensive experiments demonstrate that MagicMotion outperforms previous methods across various metrics.
 
 ## 📣 Updates
+- `2025/03/21` 🔥🔥We released interactive demo with gradio for MagicMotion.
 - `2025/03/27` MagicMotion can now perform inference on a single 4090 GPU (with less than 24GB of GPU memory).
 - `2025/03/21` 🔥🔥We released MagicMotion, including inference code and model weights.
 
@@ -37,8 +38,9 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
   - [Download Links](#download-links)
 - [🔄 Inference](#-inference)
   - [Scripts](#scripts)
+- [🖥️ Gradio Demo](#️-gradio-demo)
 - [🤝 Acknowledgements](#-acknowledgements)
-- [📚 Citation](#-citation)
+- [📚 Contact](#-contact)
 
 ## ✅ TODO List
 
@@ -123,6 +125,14 @@ python trajectory_construction/plan_sparse_box.py
 python first_frame_generation/t2i_flux.py
 python first_frame_generation/edit_image_flux.py
 ```
+## 🖥️ Gradio Demo
+
+Usage:
+
+```bash
+bash magicmotion/scripts/app/app.sh
+```
+<img src="assets/images/gradio/1.png" alt="Gradio Demo 1" style="width: 60%; border: 1px solid #ddd; border-radius: 4px; padding: 5px;"> <img src="assets/images/gradio/2.png" alt="Gradio Demo 2" style="width: 60%; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
 
 ## 🤝 Acknowledgements
 
