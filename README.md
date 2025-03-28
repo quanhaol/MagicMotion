@@ -134,16 +134,19 @@ We would like to express our gratitude to the following open-source projects tha
 
 Special thanks to the contributors of these libraries for their hard work and dedication!
 
-## 📚 Citation
+## 📚 Contact
+
+If you have any suggestions or find our work helpful, feel free to contact us
+
+Email: liqh24@m.fudan.edu.cn or zhenxingfd@gmail.com
+
+If you find our work useful, <b>please consider giving a star to this github repository and citing it</b>:
 
 ```bibtex
-@misc{li2025magicmotioncontrollablevideogeneration,
-      title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance}, 
-      author={Quanhao Li and Zhen Xing and Rui Wang and Hui Zhang and Qi Dai and Zuxuan Wu},
-      year={2025},
-      eprint={2503.16421},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.16421}, 
+@article{li2025magicmotion,
+  title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance},
+  author={Li, Quanhao and Xing, Zhen and Wang, Rui and Zhang, Hui and Dai, Qi and Wu, Zuxuan},
+  journal={arXiv preprint arXiv:2503.16421},
+  year={2025}
 }
 ```
