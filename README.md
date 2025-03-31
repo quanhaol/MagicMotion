@@ -69,9 +69,6 @@ pip install --no-build-isolation -e grounding_dino
 
 # Optional: For image editing
 pip install git+https://github.com/huggingface/image_gen_aux
-
-# For Gradio
-pip install git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
 ```
 
 ## 📦 Model Weights
