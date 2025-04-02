@@ -1,4 +1,4 @@
-<img src="assets/teaser.webp" width="100%" alt="Teaser Image">
+<img src="assets/teaser2.webp" width="100%" alt="Teaser Image">
 <br>
 <a href="https://arxiv.org/pdf/2503.16421"><img src="https://img.shields.io/static/v1?label=Paper&message=2503.16421&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=green&logo=github-pages"></a>
@@ -20,6 +20,9 @@ To address these challenges, we introduce **MagicMotion**, a novel image-to-vide
 Furthermore, we present **MagicData**, a large-scale trajectory-controlled video dataset, along with an automated pipeline for annotation and filtering.
 We also introduce **MagicBench**, a comprehensive benchmark that assesses both video quality and trajectory control accuracy across different numbers of objects.
 Extensive experiments demonstrate that MagicMotion outperforms previous methods across various metrics.
+
+
+<img src="assets/teaser.webp" width="100%" alt="Teaser Image">
 
 ## 📣 Updates
 - `2025/03/28` 🔥🔥We released interactive demo with gradio for MagicMotion.
