@@ -25,6 +25,7 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 <img src="assets/teaser.webp" width="100%" alt="Teaser Image">
 
 ## 📣 Updates
+- `2025/06/26` 🔥🔥MagicMotion has been accepted by ICCV2025!🎉🎉🎉
 - `2025/03/28` 🔥🔥We released interactive demo with gradio for MagicMotion.
 - `2025/03/27` MagicMotion can now perform inference on a single 4090 GPU (with less than 24GB of GPU memory).
 - `2025/03/21` 🔥🔥We released MagicMotion, including inference code and model weights.
