@@ -3,6 +3,7 @@
 <a href="https://arxiv.org/pdf/2503.16421"><img src="https://img.shields.io/static/v1?label=Paper&message=2503.16421&color=red&logo=arxiv"></a>
 <a href="https://quanhaol.github.io/magicmotion-site/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=green&logo=github-pages"></a>
 <a href="https://huggingface.co/quanhaol/MagicMotion"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-ffbd45.svg" alt="HuggingFace"></a>
+<a href="https://huggingface.co/datasets/quanhaol/MagicData"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-ffbd45.svg" alt="HuggingFace"></a>
 
 > **MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance**
 > <br>
@@ -25,6 +26,7 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 <img src="assets/teaser.webp" width="100%" alt="Teaser Image">
 
 ## 📣 Updates
+- `2025/07/28` 🔥🔥MagicData has been released [`here`](https://huggingface.co/datasets/quanhaol/MagicData). Welcome to use our dataset!
 - `2025/06/26` 🔥🔥MagicMotion has been accepted by ICCV2025!🎉🎉🎉
 - `2025/03/28` 🔥🔥We released interactive demo with gradio for MagicMotion.
 - `2025/03/27` MagicMotion can now perform inference on a single 4090 GPU (with less than 24GB of GPU memory).
@@ -50,9 +52,9 @@ Extensive experiments demonstrate that MagicMotion outperforms previous methods 
 
 - [x] Release our inference code and model weights
 - [x] Release gradio demo
+- [x] Release MagicData
+- [ ] Release MagicBench and evaluation code
 - [ ] Release our training code
-- [ ] Release MagicData
-- [ ] Release MagicBench
 
 ## 🐍 Installation
 
