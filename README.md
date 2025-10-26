@@ -156,10 +156,12 @@ Email: liqh24@m.fudan.edu.cn or zhenxingfd@gmail.com
 If you find our work useful, <b>please consider giving a star to this github repository and citing it</b>:
 
 ```bibtex
-@article{li2025magicmotion,
-  title={MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance},
-  author={Li, Quanhao and Xing, Zhen and Wang, Rui and Zhang, Hui and Dai, Qi and Wu, Zuxuan},
-  journal={arXiv preprint arXiv:2503.16421},
-  year={2025}
+@InProceedings{Li_2025_ICCV,
+    author    = {Li, Quanhao and Xing, Zhen and Wang, Rui and Zhang, Hui and Dai, Qi and Wu, Zuxuan},
+    title     = {MagicMotion: Controllable Video Generation with Dense-to-Sparse Trajectory Guidance},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {12112-12123}
 }
 ```
